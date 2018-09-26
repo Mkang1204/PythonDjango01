@@ -21,9 +21,10 @@ from . import views
 #urlpatterns = patterns('books.views', (r'^search_form/$', 'search_form'), (r'^search/$', 'search'), )
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('blog',include('blog.urls')),
-    path('', views.index, name='index',)
+    path('',views.post_list, name = 'post_list'),
+    # path('admin/', admin.site.urls),
+    # path('blog',include('blog.urls')),
+    # path('', views.index, name='index',)
 ]
 
 
