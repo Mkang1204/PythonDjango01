@@ -10,6 +10,7 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
+    book_sell = models.CharField(max_length=100)
 
     def publish(self):
         self.published_date = timezone.now()
