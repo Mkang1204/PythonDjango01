@@ -1,42 +1,43 @@
-<!-- <html>
-<body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-</body>
-</html> -->
 
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>NGS Database - test</title>
+        <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+        <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+        <!-- <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css"> -->
+
+
     </head>
     <body>
         <div>
-                <h1><a href="/">Django Girls Blog</a></h1>
+                <h1><a href="/">NGS Database</a></h1>
         </div>
             
-            {% for post in posts %}
-                <div>
-                    <p>published: {{ post.published_date }}</p>
-                    <h1><a href="">{{ post.title }}</a></h1>
-                    <p>{{ post.text|linebreaksbr }}</p>
-                </div>
-            {% endfor %}
-        </div>   
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <!-- n =  new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML = m + "/" + d + "/" + y; -->
+
+        
+        <div class = 'post'>   
+            <p id = 'date'>Last updated: </p>
+            <h2><a href="">Search by Date</a></h2>
+            <p>Please input the date that you want to search within:</p>
+        </div>
+        
+
+
+        <div>
+            <p>Last updated: get_date</p>
+            <h2><a href="">Search by User</a></h2>
+            <p>Please input the user/PI that is involved in the RNAseq.</p>
         </div>
 
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My third post</a></h2>
-            <p>Finally we go there and it is time to celebrate!</p>
+            <p>Last updated: get_date</p>
+            <h2><a href="">Search by runID</a></h2>
+            <p>If you remember the runID from the sequencing log, please insert it here.</p>
         </div>
 
         <div>

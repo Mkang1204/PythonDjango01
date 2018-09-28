@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Post
 from django.utils import timezone
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
@@ -11,6 +12,13 @@ def post_list(request):
 
 def index(request):
     return HttpResponse("Hello, World. I made it !")
+
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'blog/post_detail.html', {'post': post})
+
+def custom_404(request):
+    return render(request, '404.html', {}, status=404)
 
 # from django.shortcuts import render_to_response
 # from django.http import HttpResponse,HttpResponseRedirect
