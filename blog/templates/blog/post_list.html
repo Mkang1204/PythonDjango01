@@ -1,17 +1,66 @@
+{% load static %}
+<!-- 
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %} -->
 
 <html>
     <head>
-        <title>NGS Database - test</title>
-        <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
-        <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
-        <!-- <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css"> -->
+        <style>
+            body {background-color: rgb(170, 225, 238);}
+            h1   {
+                color: purple;
+                margin-left: 40px;
+            }
+            p    {
+                color: black;
+                margin-left: 40px;
+            
+            }
 
+            h2   {
+                color: purple;
+                margin-left: 40px;
+            }
+            
+
+        </style>
+
+
+
+        <title>NGS Database - test</title>
+
+
+        <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet", href="{% static '/Users/mkh1805/Box/NGS-DB/RNAseq_DB/testNGS/static/css/blog.css' %}">
+        <link rel="stylesheet", href="{% static '/Users/mkh1805/Box/NGS-DB/RNAseq_DB/testNGS/static/css/sidebar.css' %}">
+
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        
 
     </head>
+
+    <video src = "https://www.youtube.com/watch?time_continue=3&v=fCd6B5HRaZ8" width = "320", height = "240" controls> Video not supported </video>
+
+    
     <body>
+        
+        
+        
         <div>
                 <h1><a href="/">NGS Database</a></h1>
         </div>
+        
             
         <!-- n =  new Date();
         y = n.getFullYear();
@@ -48,3 +97,5 @@
 
     </body>
 </html>
+
+

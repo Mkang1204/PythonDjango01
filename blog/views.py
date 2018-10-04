@@ -14,8 +14,15 @@ def index(request):
     return HttpResponse("Hello, World. I made it !")
 
 def post_detail(request, pk):
-    post = get_object_or_404(Post, pk=pk)
+    try:
+        post = Post.objects.get(pk=1)
+    except Post.DoesNotExist:
+        raise Http404("Post not found")
     return render(request, 'blog/post_detail.html', {'post': post})
+
+# def search_detail(request, pk):
+#     post = get_object_or_404(Post, pk=pk)
+#     return render(request, 'blog/search_detail.html', {'search': post})
 
 def custom_404(request):
     return render(request, '404.html', {}, status=404)
