@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import _mysql
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'zeasn^=fu#79zowqo)7^imd-3z6q)_hw8&3#qs)h%2@qcp%0nu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.pythonanywhere.com']
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost','.pythonanywhere.com']
 
 
@@ -83,12 +84,28 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
         # 'NAME': 'mkang',
         # 'USER': 'root',
         # 'PASSWORD': '1994120456',
-        # 'HOST': 'localhost',
+        # 'HOST': 'localhost:3306',
         # 'PORT': '',
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/Users/mkh1805/Box/NGS-DB/RNAseq_DB/testNGS/static/my.cnf',
+        },
+    
+        'NAME': 'mkang',
+        'USER':'root',
+        'PASSWORD':'1994120456',
+        'PORT':'3306',
+        'HOST': 'localhost',
     }
 }
 
