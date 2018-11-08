@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<RunParameters xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <RunParametersVersion>NextSeq_2_1_0</RunParametersVersion>
+  <Setup>
+    <Read1>76</Read1>
+    <Read2>0</Read2>
+    <Index1Read>8</Index1Read>
+    <Index2Read>8</Index2Read>
+  </Setup>
+  <RunNumber>212</RunNumber>
+  <FlowCellRfidTag>
+    <SerialNumber>H7HGNBGX7</SerialNumber>
+    <LotNumber>20253195</LotNumber>
+  </FlowCellRfidTag>
+  <ReagentKitRfidTag>
+    <PartNumber>15057934</PartNumber>
+    <LotNumber>20241502</LotNumber>
+  </ReagentKitRfidTag>
+  <ExperimentName>AleAgingChimera_SingerScrippsTreg-7.9.2018</ExperimentName>
+  <LibraryID>AleAgingChimera_SingerScrippsTreg</LibraryID>
+  <RunStartDate>180709</RunStartDate>
+</RunParameters>
